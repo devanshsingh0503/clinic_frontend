@@ -4,5 +4,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/clinic_frontend/",
+  build: {
+    outDir: "dist",
+  },
 });
+
 
