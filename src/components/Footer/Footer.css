@@ -1,0 +1,78 @@
+.footer {
+  background-color: #222; /* Dark background */
+  color: #ccc;
+  padding-top: 60px;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  display: grid;
+  /* Responsive grid: 4 columns on desktop, 2 on tablet, 1 on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-col h4 {
+  color: #c7a157; /* Gold theme color */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Column 1: About */
+.footer-logo {
+  max-width: 150px;
+  background-color: white; /* Same style as hero logo */
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+.footer-col.about p {
+  line-height: 1.7;
+  color: #aaa;
+}
+
+/* Columns 2, 3, 4 */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col li {
+  margin-bottom: 10px;
+}
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-col a:hover {
+  color: #c7a157; /* Gold hover */
+}
+
+/* Contact Info styles */
+.footer-col.contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.footer-col.contact svg {
+  color: #c7a157;
+  font-size: 1rem;
+  margin-top: 5px; /* Aligns icon with first line of text */
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #444; /* Separator line */
+  font-size: 0.9rem;
+  color: #888;
+}

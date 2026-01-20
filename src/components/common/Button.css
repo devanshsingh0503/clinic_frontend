@@ -1,0 +1,90 @@
+/* src/components/common/Button.css */
+
+/* --- Base Button Style --- */
+.btn {
+  /* Sizing & Spacing */
+  padding: 14px 22px; 
+  width: 100%;
+  
+  /* Look & Feel */
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 30px;
+  cursor: pointer;
+  
+  /* Fix for Hover "Jump" */
+  border: 2px solid transparent; 
+  
+  /* Animation Prep */
+  transition: all 0.3s ease; /* For the color change */
+  position: relative; /* For the shine element */
+  overflow: hidden;  /* Clips the shine */
+}
+
+/* --- Variant Styles --- */
+/* * Selectors like ".btn.btn-primary" are correct
+ * to match classes "btn btn-primary"
+ */
+.btn.btn-primary {
+  background-color: var(--color-gold);
+  color: var(--color-dark-text);
+  border-color: var(--color-gold); /* Hides transparent border */
+  box-shadow: 0 4px 15px rgba(191, 170, 115, 0.4);
+}
+
+.btn.btn-secondary {
+  background-color: var(--color-button-secondary-bg);
+  color: var(--color-dark-text);
+  border-color: var(--color-button-secondary-bg); /* Hides transparent border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- CORRECTED: UNIFIED Hover Effect --- */
+/*
+ * This grouped selector is specific enough to override
+ * the base variants and applies the *same* hover 
+ * effect to *both* button types.
+*/
+.btn.btn-primary:hover,
+.btn.btn-secondary:hover {
+  background-color: #000;
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+/* --- Automatic Shine Element --- */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 75%;
+  height: 100%;
+  
+  /* The angled white "glint" */
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent
+  );
+  transform: skewX(-25deg);
+  
+  /* The animation: 2.5s speed, 1.5s delay, loops forever */
+  animation: shine-sweep 2.5s ease-in-out 1.5s infinite;
+}
+
+/* --- Shine Animation Definition --- */
+/* (SYNTAX FIX: Removed a stray 's' before 0%) */
+@keyframes shine-sweep {
+  0% {
+    /* Starts off-screen left */
+    left: -100%;
+  }
+  100% {
+    /* Ends off-screen right */
+    left: 100%;
+  }
+}

@@ -1,0 +1,129 @@
+/* Base header styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+ .header-scrolled {
+  opacity: 1;
+  transform: translateY(0);
+} 
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.header-nav .btn {
+  padding: 10px 18px;
+  font-size: 13px;
+}
+
+.header-nav .btn.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: transparent;
+}
+
+.header-nav .btn.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ---------- MOBILE RESPONSIVE STYLES ---------- */
+@media (max-width: 768px) {
+  
+  .header-nav {
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate hamburger into X */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    transform: translateY(-200%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  /* Show menu when open */
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links .btn {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.header-scrolled {
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(10px);
+}

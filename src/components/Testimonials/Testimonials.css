@@ -1,0 +1,65 @@
+.testimonials-section {
+  padding: 60px 5%;
+  /* We can alternate background colors */
+  background-color: #ffffff;
+}
+
+.slider-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* This wrapper is needed for padding with slick-slider */
+.testimonial-card-wrapper {
+  padding: 15px; /* Adds space between cards */
+}
+
+.testimonial-card {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  height: 280px; /* Fixed height for consistency */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stars {
+  color: #c7a157; /* Our gold theme color */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #333;
+  flex-grow: 1; /* Makes the quote fill available space */
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* --- Customizing the Slider Dots --- */
+
+.testimonials-section .slick-dots {
+  bottom: -30px; /* Move dots below the slider */
+}
+
+.testimonials-section .slick-dots li button:before {
+  font-size: 12px; /* Size of the dots */
+  color: #ccc; /* Default dot color */
+  opacity: 1;
+}
+
+.testimonials-section .slick-dots li.slick-active button:before {
+  color: #c7a157; /* Active dot color (our gold) */
+}

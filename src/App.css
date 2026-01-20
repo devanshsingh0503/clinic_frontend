@@ -1,0 +1,38 @@
+/* src/App.css */
+
+.App {
+  position: relative;
+  /* padding-top: 90px; */
+  /* padding-bottom: 100px;  */
+}
+
+/* This is the part to change.
+  Remove any 'padding-top' from this 'main' selector.
+*/
+
+
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  margin: 0;
+  /* padding-top: 90px; Same as your header height */
+  box-sizing: border-box;
+}
+

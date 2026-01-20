@@ -1,0 +1,67 @@
+.ba-section {
+  padding: 60px 5%;
+  background-color: #f9f9f9; /* Light grey background to separate it */
+}
+
+.ba-gallery-grid {
+  display: grid;
+  /* Creates a responsive grid: 
+     - Tries to fit columns of 350px
+     - On small screens, becomes 1 column
+  */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ba-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Ensures the images don't spill out */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ba-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.ba-images-container {
+  display: flex;
+  width: 100%;
+}
+
+.ba-image-wrapper {
+  position: relative; /* For the "BEFORE" / "AFTER" label */
+  width: 50%;
+}
+
+.ba-image-wrapper img {
+  width: 100%;
+  height: 300px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures image covers the area, may crop */
+  display: block;
+}
+
+.ba-image-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.ba-procedure-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 20px 15px;
+}

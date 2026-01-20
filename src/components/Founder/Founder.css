@@ -1,0 +1,52 @@
+.founder-section {
+  padding: 100px 100px;
+  background-color: #ffffff;
+}
+
+.founder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.founder-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.founder-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.founder-bio {
+  flex: 1.5;
+  text-align: left;
+}
+
+.founder-bio h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.founder-bio p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founder-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .founder-bio {
+    text-align: center;
+  }
+}
